@@ -300,11 +300,12 @@ var Zepto = (function() {
   // "null"  => null
   // "42"    => 42
   // "42.5"  => 42.5
+  // "42.0"  => "42.0"
   // "08"    => "08"
   // JSON    => parse if valid
   // String  => self
   function deserializeValue(value) {
-    var num
+	var num
     try {
       return value ?
         value == "true" ||
